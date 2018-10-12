@@ -7,14 +7,15 @@ dataPath = '../ReadBBox/ArroundAug/';
 % dataPath = '../ReadBBox/CoreAug/';
 savePath = 'Input/';
 classType = 'WHO';
-% classType = 'Edmondson';
+% classType = 'Edmondson';分级
 
 for i=1:length(available)
-    disp(available(i).patientNo);    
+    disp(available(i).patientNo);  % 直接将里面内容显示到窗口中  
     data_Structure(dataPath, savePath, labels, available(i), classType);
+    
 end
 
-% ��������
+% Ìí¼ÓÑù±¾
 load '../add.mat';
 for i=1:length(add)
     disp(add(i).patientNo);
